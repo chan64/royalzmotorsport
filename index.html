@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/w3.css">
+		<style>
+			.mySlides {display:none;}
+		</style>
 	</head>
 	<body>
 
@@ -38,7 +42,7 @@
 								<li><a href="#aboutus">About Us</a></li>
 								<li><a href="#events">Events</a></li>
 								<li><a href="#sponsors">Sponsors</a></li>
-								<li><a href="#intro">Gallery</a></li>
+								<li><a href="#gallery">Gallery</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -213,7 +217,7 @@
 							<article id="baja">
 								<a class="icon fa-arrow-left" href="#events"><b>&nbsp;&nbsp;Events</b></a><br><br>
 								<h2 class="major">BAJA</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img src="images/baja.jpg" alt="" /></span>
 								<p>Design and fabrication of an all terrain vehicle. The buggy has to endure through the toughest obstacles on the track set up in NATRAX pithampur.</p>
 								<h3 class="major">Specifications</h3>
 								<div class="table-wrapper">
@@ -386,6 +390,25 @@
 								<a target="_blank" href="http://www.sifamotors.com">
 									<img height="30%" width="30%" src="images/logos/Sifa.jpg"/>
 								</a>&nbsp;&nbsp;
+							</article>
+
+						<!--Gallery-->
+							<article id="gallery">
+								<h2 class="major">Gallery</h2>
+								<div class="w3-content w3-section">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/1.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/2.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/3.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/4.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/5.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/6.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/7.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/8.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/9.jpg" style="width:100%">
+								  <img class="mySlides w3-animate-fading" src="images/gallery/10.jpg" style="width:100%">
+								  <!--<img class="mySlides" src="img_chicago.jpg" style="width:100%">-->
+								</div>
+								
 							</article>
 
 						<!-- Intro -->
@@ -704,6 +727,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			    var i;
+			    var x = document.getElementsByClassName("mySlides");
+			    for (i = 0; i < x.length; i++) {
+			       x[i].style.display = "none";  
+			    }
+			    myIndex++;
+			    if (myIndex > x.length) {myIndex = 1}    
+			    x[myIndex-1].style.display = "block";  
+			    setTimeout(carousel, 5000); // Change image every 2 seconds
+			}
+			</script>
 
 	</body>
 </html>
